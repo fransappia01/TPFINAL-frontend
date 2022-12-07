@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import { HStack, Input, Button, useToast } from '@chakra-ui/react';
-import { nanoid } from 'nanoid';
+//import React, { useState } from 'react';
+//import { HStack, Input, Button, useToast } from '@chakra-ui/react';
+//import { nanoid } from 'nanoid';
 
-const AddTodo = ({addTodo}) => {
-  const [content, setContent] = useState('');
-  const toast = useToast();
+//const AddTodo = ({addTodo}) => {
+  //const [content, setContent] = useState('');
+  //const toast = useToast();
   
-  function handleSubmit(e) {
-    e.preventDefault();
-
-    if(!content) {
-      toast({
-        title: 'Contenido vacio',
-        status: 'error',
-        duration: 2000,
-        isClosable: true
-      });
+ // function handleSubmit(e) {
+   // e.preventDefault();
+//
+  //  if(!content) {
+    //  toast({
+      //  title: 'Contenido vacio',
+        //status: 'error',
+        //duration: 2000,
+        //isClosable: true
+     /*  });
 
       return;
     }
@@ -41,4 +41,4 @@ const AddTodo = ({addTodo}) => {
     </form>
   );
 }
-export default AddTodo;
+export default AddTodo; */

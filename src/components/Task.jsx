@@ -6,7 +6,7 @@ export default function Task() {
 	return(
 		<div className="task">
 			<div className="task-container">
-				<p> Title: </p><n></n>
+				<p> Title: </p>
 				<p> Description: </p>
 			</div>
 		</div>
