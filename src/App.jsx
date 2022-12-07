@@ -1,33 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+/* import { VStack, Box, Heading } from '@chakra-ui/react';
+import TodoList from './components/TodoList';
+import AddTodo from './components/AddTodo';
+import { useState, useEffect } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [todos, setTodos] = useState(() => JSON.parse(localStorage.getItem('todos')) || []);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
+
+  function deleteTodo(id) {
+    const newTodos = todos.filter((todo) => {
+      return todo.id !== id;
+    });
+
+    setTodos(newTodos);
+  }
+
+  function addTodo(todo) {
+    setTodos([...todos, todo]);
+  }
+  return (
+    <VStack p='4'>
+      <Box>
+        <Heading mb='8' fontWeight='extrabold' size='2xl' bgGradient='linear(to-r, cyan.400, purple.400, pink.400)' bgClip='text'>To Do List</Heading>
+      </Box>
+      <TodoList todos={todos} deleteTodo={deleteTodo} />
+      <AddTodo addTodo={addTodo} />
+    </VStack>
+  );
+}
+export default App; */
+
+
+
+import './App.css'
+import  Home  from './components/Home'
+
+function App() {
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <>
+      <Home/>
+    </>
   )
 }
 

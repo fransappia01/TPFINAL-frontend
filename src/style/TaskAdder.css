@@ -1,0 +1,11 @@
+.add-menu{
+	height: 5rem;
+	width: 38.7rem;
+	padding: 10px;
+	border-radius: 12px;
+	background: rgba(244, 229, 229, 0.5);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(61,48,48,0.25);
+	transition: all .5s ease;
+}
