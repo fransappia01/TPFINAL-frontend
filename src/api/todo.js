@@ -1,4 +1,4 @@
-const backendURL = 'http://localhost:3000';
+const backendURL = import.meta.env.BACKEND_URL || 'http://localhost:3000';
 
 const headers = new Headers();
 headers.append('Content-Type', 'application/json');
