@@ -1,14 +1,13 @@
-import React from "react";
-import '../style/Task.css'
+import React from 'react';
+import '../style/Task.css';
 
-
-export default function Task() {
-	return(
-		<div className="task">
-			<div className="task-container">
-				<p> Title: </p>
-				<p> Description: </p>
-			</div>
-		</div>
-	)
+export default function Task({ title, body }) {
+  return (
+    <div className='task'>
+      <div className='task-container'>
+        <p>Title: {title}</p>
+        <p>Description: {body}</p>
+      </div>
+    </div>
+  )
 }

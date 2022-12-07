@@ -1,50 +1,13 @@
-/* import { VStack, Box, Heading } from '@chakra-ui/react';
-import TodoList from './components/TodoList';
-import AddTodo from './components/AddTodo';
-import { useState, useEffect } from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Home from './components/Home';
+import './App.css';
 
-function App() {
-  const [todos, setTodos] = useState(() => JSON.parse(localStorage.getItem('todos')) || []);
+const queryClient = new QueryClient();
 
-  useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos));
-  }, [todos]);
-
-  function deleteTodo(id) {
-    const newTodos = todos.filter((todo) => {
-      return todo.id !== id;
-    });
-
-    setTodos(newTodos);
-  }
-
-  function addTodo(todo) {
-    setTodos([...todos, todo]);
-  }
+export default function App() {
   return (
-    <VStack p='4'>
-      <Box>
-        <Heading mb='8' fontWeight='extrabold' size='2xl' bgGradient='linear(to-r, cyan.400, purple.400, pink.400)' bgClip='text'>To Do List</Heading>
-      </Box>
-      <TodoList todos={todos} deleteTodo={deleteTodo} />
-      <AddTodo addTodo={addTodo} />
-    </VStack>
+    <QueryClientProvider client={queryClient}>
+      <Home />
+    </QueryClientProvider>
   );
 }
-export default App; */
-
-
-
-import './App.css'
-import  Home  from './components/Home'
-
-function App() {
-
-  return (
-    <>
-      <Home/>
-    </>
-  )
-}
-
-export default App
