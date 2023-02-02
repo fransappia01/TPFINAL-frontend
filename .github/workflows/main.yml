@@ -51,7 +51,7 @@ jobs:
           tags: |
             fransappia01/ingsw3_frontend:latest
           # build on feature branches, push only on master branch
-          push: ${{ github.ref == 'refs/heads/main' }}
+          push: ${{ github.ref == 'refs/heads/master' }}
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
