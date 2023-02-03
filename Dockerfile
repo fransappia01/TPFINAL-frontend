@@ -23,3 +23,4 @@ FROM nginx:1.23.3-alpine AS DEPLOYMENT_STAGE
 COPY --from=BUILD_STAGE /app/dist/ /usr/share/nginx/html
 
 EXPOSE 80
+    

@@ -1,13 +1,13 @@
 
 .task {
-	padding: 10px;
+	padding: 4px;
 }
 .task-container {
-	height: 2rem;
-	width: 35rem;
+	height: 6rem;
+	width: 30rem;
 	padding: 10px;
 	border-radius: 12px;
-	background: rgba(45, 39, 39, 0.5);
+	background: rgba(57, 47, 47, 0.5);
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 	border: 1px solid rgba(61,48,48,0.25);
