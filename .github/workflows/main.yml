@@ -63,4 +63,4 @@ jobs:
         run: railway up -s ingsw3_frontend
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-          VITE_BASE_URL: ${{ secrets.VITE_BASE_URL }}
+          VITE_BACKEND_URL: ${{ secrets.VITE_BACKEND_URL }}
