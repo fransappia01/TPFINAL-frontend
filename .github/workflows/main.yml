@@ -3,7 +3,7 @@ name: FRONTEND CI
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   install-dependencies-build-and-test:
