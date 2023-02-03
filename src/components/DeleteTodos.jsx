@@ -4,33 +4,27 @@ import Task from './Task';
 import { deleteTodos } from '../api/todo';
 import '../style/TodoList.css';
 
-export default function TodoList() {
-  const { isLoading, isError, data, error } = useQuery({
-    queryKey: ['todos'],
-    queryFn: deleteTodos,
-  });
+export default function deleteTodos() {
+ 
+  const queryClient = useQueryClient();
 
-  if (isLoading) {
-    return (
-      <h1>Cargando</h1>
-    );
-  }
+  const { mutate } = useMutation({
+    mutationFn: postTodo,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['todos'] });
+    },
+  })
 
-  if (isError) {
-    return (
-      <h1>Hubo un error: {JSON.stringify(error)}</h1>
-    );
-  }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
 
   return (
-    <div>
-      <div className='todo-container'>
-        <div className='tasks'>
-          {data.map(({ title, body }, index) => (
-            <Task key={index} title={title} body={body} />
-          ))}
-        </div>
-      </div>
+    <div className='add-menu'>
+      <form onSubmit={handleSubmit}>
+        <label>Title:</label>
+        <Button type='submit' colorScheme='red' px='8'>Add task</Button>
+      </form>
     </div>
-  );
+  )
 }
