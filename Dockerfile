@@ -1,6 +1,6 @@
 FROM node:19-alpine3.15 AS BUILD_STAGE
 
-ARG VITE_BASE_URL
+ARG VITE_BACKEND_URL
 
 # Set working directory
 WORKDIR /app
