@@ -38,11 +38,12 @@ export default function TaskAdder() {
           onChange={(event) => setBody(event.target.value)}
           value={body}
           type='text'
-        /><Stack direction="row" justifyContent="flex-end" spacing={2}>
+        />
+        <Stack direction="row" justifyContent="flex-end" spacing={2}>
         <Button variant="contained"  type='submit' colorScheme='cyan' px='8'>
           Delete
         </Button>
-        <Button id="todolist-deleteall-button" variant="contained" color="error" onClick={handleDelete}>
+        <Button variant="contained"  type='submit' colorScheme='red' px='8'>
             DELETE ALL
         </Button>
     </Stack>
