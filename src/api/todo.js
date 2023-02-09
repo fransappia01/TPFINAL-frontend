@@ -25,11 +25,10 @@ const postTodo = async ({ title, body }) => {
   return todo;
 };
 
-const deleteTodos = async ({ title, body }) => {
+const deleteTodos = async () => {
   const res = await fetch(`${backendURL}/api/todo`, {
     method: 'DELETE',
-    headers: headers,
-    body: JSON.stringify({ title, body }),
+    headers: headers, 
   });
   const todo = await res.json();
   console.log(todo);

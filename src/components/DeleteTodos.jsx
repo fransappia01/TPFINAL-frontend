@@ -10,6 +10,7 @@ export default function DeleteTodo() {
     mutationFn: DeleteTodo,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['todos'] });
+      setDeleteData(data.message);
     },
   })
 
@@ -20,7 +21,7 @@ export default function DeleteTodo() {
   return (
     <div className='add-menu'>
       <form onSubmit={handleSubmit}>
-        <Button type='submit' colorScheme='red' px='8'>Delete All</Button>
+        <Button type='submit' backgroundColor='red' px='8'>Delete All</Button>
       </form>
     </div>
   )
