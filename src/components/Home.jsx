@@ -1,5 +1,6 @@
 import React from "react";
 import TaskAdder from "./TaskAdder";
+import DeleteTodo from "./DeleteTodos";
 import TodoList from './TodoList';
 
 export default function Home() {
@@ -10,6 +11,9 @@ export default function Home() {
       </div>
       <div>
         <TaskAdder />
+      </div>
+      <div>
+        <DeleteTodo/>
       </div>
       <div>
         <TodoList />

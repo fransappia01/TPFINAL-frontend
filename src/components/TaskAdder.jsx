@@ -25,7 +25,7 @@ export default function TaskAdder() {
   return (
     <div className='add-menu'>
       <form onSubmit={handleSubmit}>
-        <label>Title:</label>
+        <label>Title:  </label>
         <input
           onChange={(event) => setTitle(event.target.value)}
           value={title}
@@ -33,15 +33,19 @@ export default function TaskAdder() {
           required
           type='text'
         />
-        <label>Description:</label>
+        <label>     Description:  </label>
         <input
           onChange={(event) => setBody(event.target.value)}
           value={body}
           type='text'
         />
-        <Button type='submit' colorScheme='cyan' px='8'>Add task</Button>
+        <label>     </label>
+        <Button type='submit' colorScheme='cyan' px='8'>Add Task</Button>
+        <label>     </label>  
       </form>
+     
     </div>
+    
   )
 }
 

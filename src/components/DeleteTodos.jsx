@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@chakra-ui/react';
-import { postTodo } from '../api/todo';
+import { deleteTodos } from '../api/todo';
 import '../style/TaskAdder.css';
 
-export default function DeleteTodos() {
+export default function DeleteTodo() {
   const queryClient = useQueryClient();
 
   const { mutate } = useMutation({
-    mutationFn: postTodo,
+    mutationFn: DeleteTodo,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['todos'] });
     },
