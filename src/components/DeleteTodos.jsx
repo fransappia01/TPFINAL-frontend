@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@chakra-ui/react';
 import { deleteTodos } from '../api/todo';
-import '../style/TaskAdder.css';
+import '../src/index.css';
 
 export default function DeleteTodo() {
   const queryClient = useQueryClient();
