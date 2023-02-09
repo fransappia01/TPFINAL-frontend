@@ -7,7 +7,7 @@ export default function DeleteTodo() {
   const queryClient = useQueryClient();
 
   const { mutate } = useMutation({
-    mutationFn: DeleteTodo,
+    mutationFn: deleteTodos,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['todos'] });
       setDeleteData(data.message);
