@@ -40,7 +40,7 @@ export default function TaskAdder() {
           type='text'
         />
         <label>     </label>
-        <Button onClick={resetInputField} type='submit' colorScheme='cyan' px='8'>Add Task</Button>
+        <Button type='submit' colorScheme='cyan' px='8'>Add Task</Button>
         <label>     </label>  
       </form>
      
