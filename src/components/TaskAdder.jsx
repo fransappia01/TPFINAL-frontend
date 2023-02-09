@@ -38,9 +38,18 @@ export default function TaskAdder() {
           onChange={(event) => setBody(event.target.value)}
           value={body}
           type='text'
-        />
-        <Button type='submit' colorScheme='cyan' px='8'>Add task</Button>
+        /><Stack direction="row" justifyContent="flex-end" spacing={2}>
+        <Button variant="contained"  type='submit' colorScheme='cyan' px='8'>
+          Delete
+        </Button>
+        <Button id="todolist-deleteall-button" variant="contained" color="error" onClick={handleDelete}>
+            DELETE ALL
+        </Button>
+    </Stack>
+        
       </form>
     </div>
   )
 }
+
+

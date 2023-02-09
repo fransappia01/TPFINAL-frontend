@@ -1,11 +1,10 @@
-import React from 'react';
-import { useQuery } from '@tanstack/react-query';
-import Task from './Task';
-import { deleteTodos } from '../api/todo';
-import '../style/TodoList.css';
+import React, { useState } from 'react';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { Button } from '@chakra-ui/react';
+import { postTodo } from '../api/todo';
+import '../style/TaskAdder.css';
 
-export default function deleteTodos() {
- 
+export default function DeleteTodos() {
   const queryClient = useQueryClient();
 
   const { mutate } = useMutation({
@@ -22,9 +21,10 @@ export default function deleteTodos() {
   return (
     <div className='add-menu'>
       <form onSubmit={handleSubmit}>
-        <label>Title:</label>
-        <Button type='submit' colorScheme='red' px='8'>Add task</Button>
+        <Button type='submit' colorScheme='red' px='8'>Delete All</Button>
       </form>
     </div>
   )
 }
+
+
