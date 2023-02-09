@@ -32,12 +32,14 @@ export default function TaskAdder() {
           minLength={5}
           required
           type='text'
+          
         />
         <label>     Description:  </label>
         <input
           onChange={(event) => setBody(event.target.value)}
           value={body}
           type='text'
+          
         />
         <label>     </label>
         <Button type='submit' colorScheme='cyan' px='8'>Add Task</Button>
