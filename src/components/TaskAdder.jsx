@@ -39,18 +39,9 @@ export default function TaskAdder() {
           value={body}
           type='text'
         />
-        <Stack direction="row" justifyContent="flex-end" spacing={2}>
-        <Button variant="contained"  type='submit' colorScheme='cyan' px='8'>
-          Delete
-        </Button>
-        <Button variant="contained"  type='submit' colorScheme='red' px='8'>
-            DELETE ALL
-        </Button>
-    </Stack>
-        
+        <Button type='submit' colorScheme='cyan' px='8'>Add task</Button>
       </form>
     </div>
   )
 }
-
 
