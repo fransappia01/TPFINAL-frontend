@@ -18,6 +18,7 @@ export default function DeleteTodo() {
   const handleSubmit = (event) => {
     event.preventDefault();
                                 //hacer que la alerta aparezca luego de 2 segundos
+  setTimeout(()=>{
     Swal.fire({
       position: 'bottom-left',
       icon:'success',
@@ -28,6 +29,7 @@ export default function DeleteTodo() {
       height: 100,
       toast: true
     })
+  },1000)                                
   
   };
 
