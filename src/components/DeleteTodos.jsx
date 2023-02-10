@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { Button } from '@chakra-ui/react';
+import { Button, Toast } from '@chakra-ui/react';
 import { deleteTodos } from '../api/todo';
 import Swal from 'sweetalert2'
+import { height, width } from '@mui/system';
 
 export default function DeleteTodo() {
   const queryClient = useQueryClient();
@@ -16,22 +17,16 @@ export default function DeleteTodo() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    
-    const toast = useToast()
-    toast({
-      title: 'Account created.',
-      description: "We've created your account for you.",
-      status: 'success',
-      duration: 9000,
-      isClosable: true,
+    Swal.fire({
+      position: 'bottom-left',
+      icon:'success',
+      title:'All your tasks have been successfully deleted',
+      showConfirmButton: false,
+      timer: 1500,
+      width: 300,
+      height: 100,
+      toast: true
     })
-    //Swal.fire({
-    //  position: 'top-end',
-    //  icon:'success',
-    //  title:'Task added to the list',
-    //  showConfirmButton: false,
-    //  timer: 1500
-    //})
   
   };
 
