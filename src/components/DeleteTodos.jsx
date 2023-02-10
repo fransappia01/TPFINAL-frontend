@@ -3,7 +3,6 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button, Toast } from '@chakra-ui/react';
 import { deleteTodos } from '../api/todo';
 import Swal from 'sweetalert2'
-import { height, width } from '@mui/system';
 
 export default function DeleteTodo() {
   const queryClient = useQueryClient();
