@@ -20,6 +20,8 @@ export default function TaskAdder() {
   const handleSubmit = (event) => {
     event.preventDefault();
     mutate({ title: title, body: body });
+    setBody("");
+    setTitle("");
   };
 
   return (

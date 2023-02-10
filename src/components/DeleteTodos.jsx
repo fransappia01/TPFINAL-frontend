@@ -23,10 +23,10 @@ export default function DeleteTodo() {
     deleteMutation.mutate();
     const toast = useToast()
     toast({
-      title: 'Account created.',
-      description: "We've created your account for you.",
+      title: 'Todos deleted',
+      description: "Todos deleted",
       status: 'success',
-      duration: 9000,
+      duration: 5000,
       isClosable: true,
     })
   }
