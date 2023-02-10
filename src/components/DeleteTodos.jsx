@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@chakra-ui/react';
 import { deleteTodos } from '../api/todo';
+import { Alert } from '@chakra-ui/react';
+import { useToast } from '@chakra-ui/react'
 
 export default function DeleteTodo() {
   const queryClient = useQueryClient();
@@ -31,12 +33,12 @@ export default function DeleteTodo() {
       <form onSubmit={handleSubmit}>
         <Button type='submit' backgroundColor='red' px='8' onClick={handleDelete}>Delete All</Button>
         {deleteMutation.isSuccess &&
-                    <Snackbar id="todolist-delete-snackbar" open={open} autoHideDuration={5000} onClose={handleClose} sx={{ width: '100%' }}>
+                    <useToast id="todolist-delete-snackbar" open={open} autoHideDuration={5000} onClose={handleClose} sx={{ width: '100%' }}>
                         <Alert status='error'>
                          <AlertIcon />
                             Your ToDo's has been deleted
                         </Alert>
-                    </Snackbar>}
+                    </useToast>}
       </form>
     </div>
   )
