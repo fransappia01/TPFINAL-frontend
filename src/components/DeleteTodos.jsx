@@ -32,8 +32,9 @@ export default function DeleteTodo() {
         <Button type='submit' backgroundColor='red' px='8' onClick={handleDelete}>Delete All</Button>
         {deleteMutation.isSuccess &&
                     <Snackbar id="todolist-delete-snackbar" open={open} autoHideDuration={5000} onClose={handleClose} sx={{ width: '100%' }}>
-                        <Alert severity="info" >
-                            {deleteData}
+                        <Alert status='error'>
+                         <AlertIcon />
+                            Your ToDo's has been deleted
                         </Alert>
                     </Snackbar>}
       </form>
