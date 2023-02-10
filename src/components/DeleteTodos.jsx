@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@chakra-ui/react';
 import { deleteTodos } from '../api/todo';
+import {Swal} from 'sweetalert2'
 
 export default function DeleteTodo() {
   const queryClient = useQueryClient();
@@ -15,6 +16,14 @@ export default function DeleteTodo() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    Swal.fire({
+      position: 'top-end',
+      icon:'success',
+      title:'Task added to the list',
+      showConfirmButton: false,
+      timer: 1500
+    })
+  
   };
 
   function handleDelete() {
