@@ -23,12 +23,11 @@ export default function DeleteTodo() {
     deleteMutation.mutate();
     const toast = useToast()
     toast({
-      position: 'bottom-left',
-      render: () => (
-        <Box color='white' p={3} bg='blue.500'>
-          Hello World
-        </Box>
-      ),
+      title: 'Account created.',
+      description: "We've created your account for you.",
+      status: 'success',
+      duration: 9000,
+      isClosable: true,
     })
   }
 
