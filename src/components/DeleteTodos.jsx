@@ -3,6 +3,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@chakra-ui/react';
 import { deleteTodos } from '../api/todo';
 import { Alert } from '@chakra-ui/react';
+import { useToast } from '@chakra-ui/react';
 
 export default function DeleteTodo() {
   const queryClient = useQueryClient();
@@ -20,7 +21,17 @@ export default function DeleteTodo() {
 
   function handleDelete() {
     deleteMutation.mutate();
-}
+    const toast = useToast()
+    toast({
+      position: 'bottom-left',
+      render: () => (
+        <Box color='white' p={3} bg='blue.500'>
+          Hello World
+        </Box>
+      ),
+    })
+  }
+
 
   return (
     <div className='add-menu'>
