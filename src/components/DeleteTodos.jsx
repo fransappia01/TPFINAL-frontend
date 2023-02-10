@@ -16,13 +16,22 @@ export default function DeleteTodo() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    Swal.fire({
-      position: 'top-end',
-      icon:'success',
-      title:'Task added to the list',
-      showConfirmButton: false,
-      timer: 1500
+    
+    const toast = useToast()
+    toast({
+      title: 'Account created.',
+      description: "We've created your account for you.",
+      status: 'success',
+      duration: 9000,
+      isClosable: true,
     })
+    //Swal.fire({
+    //  position: 'top-end',
+    //  icon:'success',
+    //  title:'Task added to the list',
+    //  showConfirmButton: false,
+    //  timer: 1500
+    //})
   
   };
 
