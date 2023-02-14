@@ -30,7 +30,6 @@ jobs:
 
       - name: Integration Test    #probando pipeline con test integration
         run: |
-         cd ..
          cd codecept
          npx codeceptjs run --steps
 
