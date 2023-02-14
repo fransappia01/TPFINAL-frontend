@@ -41,7 +41,7 @@ export default function DeleteTodo() {
   return (
     <div className='add-menu'>
       <form onSubmit={handleSubmit}>
-        <Button type='submit' backgroundColor='red' px='8' onClick={handleDelete}>Delete All</Button>
+        <Button id='delete_button' type='submit' backgroundColor='red' px='8' onClick={handleDelete}>Delete All</Button>
       </form>
     </div>
   )
