@@ -36,10 +36,10 @@ jobs:
           VITE_BACKEND_URL: ${{ secrets.VITE_BACKEND_URL }}
           
       - name: Archive test report
+        working-directory: ./codecept
         uses: actions/upload-artifact@v3
         with:
           name: test-report
-          working-directory: ./codecept
           path: output/result.xml
 
       - name: Checkout code
