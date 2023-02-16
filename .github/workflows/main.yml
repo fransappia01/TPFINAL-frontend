@@ -28,10 +28,9 @@ jobs:
 
     # steps to perform in job
 
-      #- name: Integration Test    #probando pipeline con test integration
-       # run: | 
-       #  cd codecept            
-      # npx codeceptjs run --steps
+      - name: Integration Test    #probando pipeline con test integration
+        working-directory: ./codecept
+        run: npx codeceptjs run --steps
 
       - name: Checkout code
         uses: actions/checkout@v3
