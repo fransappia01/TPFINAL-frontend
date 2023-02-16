@@ -33,7 +33,7 @@ jobs:
         working-directory: ./codecept
         run: npx codeceptjs run --steps
         env:
-        VITE_BACKEND_URL: ${{ secrets.VITE_BACKEND_URL }}
+          VITE_BACKEND_URL: ${{ secrets.VITE_BACKEND_URL }}
           
 
       - name: Checkout code
