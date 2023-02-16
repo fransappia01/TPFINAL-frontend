@@ -31,7 +31,7 @@ jobs:
 
       - name: Integration Test    #probando pipeline con test integration
         working-directory: ./codecept
-        run: npx codeceptjs run --steps
+        run: npx codeceptjs run --steps --reporter mocha-junit-reporter
         env:
           VITE_BACKEND_URL: ${{ secrets.VITE_BACKEND_URL }}
 
@@ -45,7 +45,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: test-report
-          path: ./codecept/output/result.xml
+          path: ./codecept/test-results.xml
 
       - name: Checkout code
         uses: actions/checkout@v3
