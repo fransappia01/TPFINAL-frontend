@@ -34,7 +34,13 @@ jobs:
         run: npx codeceptjs run --steps
         env:
           VITE_BACKEND_URL: ${{ secrets.VITE_BACKEND_URL }}
-          
+
+      - name: Test ls
+        run: |
+          ls
+          ls codecept
+          ls codecept/output
+
       - name: Archive test report
         uses: actions/upload-artifact@v3
         with:
