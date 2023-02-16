@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: test-report
-          path: codecept/output/result.xml
+          path: ./codecept/output/result.xml
 
       - name: Checkout code
         uses: actions/checkout@v3
