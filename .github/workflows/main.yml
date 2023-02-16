@@ -32,7 +32,7 @@ jobs:
       - name: Integration Test    #probando pipeline con test integration
         working-directory: ./codecept
         run: npx codeceptjs run --steps
-        with:
+        env:
         VITE_BACKEND_URL: ${{ secrets.VITE_BACKEND_URL }}
           
 
