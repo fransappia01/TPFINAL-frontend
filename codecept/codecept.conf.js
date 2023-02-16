@@ -25,9 +25,8 @@ exports.config = {
 		},
     Playwright: {
       url: 'https://deluxe-dust-production-isw3.up.railway.app/',
-      show: true,
+      show: false,
       browser: 'chromium',
-      headless: true
     }
 	},
   mocha:  {
