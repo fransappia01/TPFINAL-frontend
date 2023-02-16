@@ -19,6 +19,7 @@ jobs:
           node-version: 19.x
 
       - name: Install packages
+        working-directory: ./codecept
         run: npm ci
 
   #build-and-push-docker-image:
