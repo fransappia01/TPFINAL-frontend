@@ -4,7 +4,7 @@ const expect = require('chai').expect;
 const {I} = inject();
 
 require('dotenv').config()
-const backendURL = process.env.VITE_BACKEND_URL //problema con el meta env
+const backendURL = process.env.VITE_BACKEND_URL 
 
 
 Scenario('Verify a successful call', async () => {
